@@ -21,8 +21,6 @@ Project ini meneruskan codebase pembelajaran mentor: dua halaman detail produk d
 - Output/error lama dibersihkan saat pilihan berubah; fitur Day 15 dan galeri foto tetap dipertahankan.
 - Detail ketentuan dan testing: [Day 16 Control Flow](docs/DAY16_CONTROL_FLOW.md) dan [Testing Day 16](docs/TESTING_DAY16.md).
 
-Latihan kode PPT (`if/else`, diskon, kopi gratis, dan promo mingguan) tersedia di [exercises/day16](exercises/day16/README.md). Latihan ini terpisah dari implementasi situs.
-
 ## Stack
 
 HTML, CSS, JavaScript vanilla, Vite (admin), Node.js, Express, PostgreSQL 16, Docker Compose, Zod, Vitest, Supertest, OpenAPI/Swagger UI.
@@ -72,6 +70,7 @@ npm run dev
 Jika sudah pernah menyiapkan dan mengisi database, **jangan jalankan seed ulang**. Migration yang sudah diterapkan akan dilewati. Untuk stok lama, gunakan `node scripts/audit-stock.js` sebelum migration `004` ketika pindah dari database versi lama.
 
 Endpoint:
+
 - `http://localhost:3000/health`
 - `http://localhost:3000/api/products/2`
 - `http://localhost:3000/api-docs`
@@ -117,7 +116,7 @@ Lihat [catatan pengujian Day 15](docs/TESTING_DAY15.md) untuk checklist manual u
 
 ## Catatan penggunaan AI
 
-AI digunakan untuk diskusi materi, review dan debugging, membantu penulisan implementasi frontend, perbaikan backend (stok dan multiple image), penyusunan pengujian serta dokumentasi. Hasil kode diperiksa dan diuji kembali secara lokal.
+AI digunakan sebagai rekan diskusi materi, peninjau (review), dan debugging, khususnya dalam membantu implementasi frontend serta perbaikan logika backend (fitur stok dan multiple image). AI juga membantu dalam menyusun skenario pengujian dan dokumentasi proyek. Seluruh hasil kode tetap diperiksa, diperbaiki, dan diuji kembali secara mandiri di lingkungan lokal
 
 ## Asal codebase
 
