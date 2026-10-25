@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="product-day15.css" />
 </head>
-<body class="day15-product">
+<body class="day15-product day16-product">
   <div class="announcement">STUDIO BASICS <span aria-hidden="true">✳</span> Everyday essentials, thoughtfully made</div>
   <header class="site-header">
     <a href="product-1.html" class="wordmark" aria-label="Studio Basics, beranda">STUDIO<br /><span>BASICS</span></a>
@@ -55,7 +55,7 @@
       <div class="product-info" id="detail">
         <p class="eyebrow">Everyday collection <span>·</span> Linen essentials</p>
         <h1 id="product-title">Kemeja<br />Linen Biru</h1>
-        <p class="product-price" id="productPrice" data-price="150000">Rp150.000 <span>· Harga per item</span></p>
+        <p class="product-price" id="productPrice" data-price="150000" data-stock-source="demo">Rp150.000 <span>· Harga per item</span></p>
         <p class="intro">Kemeja linen biru dengan potongan santai. Ringan dan mudah dipadukan untuk tampilan sehari-hari.</p>
         <div class="accords" aria-label="Informasi produk"><span>Linen</span><span>Unisex</span><span>S · M · L</span></div>
 
@@ -79,6 +79,7 @@
           <button type="submit" class="day15-update-button">Update pilihan <span aria-hidden="true">↗</span></button>
         </form>
 
+        <p class="day16-feedback" id="selectionFeedback" role="status" aria-live="polite"></p>
         <p class="shipping-note"><span aria-hidden="true">✳</span> Pilih ukuran dan jumlah, lalu klik Update Pilihan untuk melihat subtotal.</p>
         <div class="product-details" id="cerita">
           <details open><summary>Deskripsi <span aria-hidden="true">+</span></summary><p>Kemeja linen warna biru, ukuran S/M/L, harga Rp150.000. Data produk ini ditulis langsung dalam HTML sebagai latihan hardcode Day 15, tanpa request API.</p></details>
@@ -93,6 +94,7 @@
       <div class="checkout-description">
         <span class="checkout-eyebrow">Pilihan kamu</span>
         <p id="selectionSummary" aria-live="polite"></p>
+          <ul id="unitList" class="day16-unit-list" aria-label="Daftar unit pesanan"></ul>
       </div>
       <div class="checkout-total"><span>Subtotal</span><strong id="subtotalText" aria-live="polite"></strong></div>
       <button id="checkoutButton" class="checkout-action" type="button">Lanjutkan pembayaran <span aria-hidden="true">↗</span></button>

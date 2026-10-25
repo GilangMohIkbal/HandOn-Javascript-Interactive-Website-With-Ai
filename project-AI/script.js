@@ -82,6 +82,9 @@ function renderGallery(product) {
 function showError(message) {
   // Mencegah subtotal dihitung dari data API yang gagal dimuat.
   apiPriceElement.dataset.price = "";
+  apiPriceElement.dataset.stock = "";
+  $("#selectionFeedback").textContent = "";
+  $("#unitList").replaceChildren();
   apiVariantInput.disabled = true;
   apiSubmitButton.disabled = true;
   apiCheckoutBar.hidden = true;
@@ -100,6 +103,13 @@ function renderProduct(product) {
   apiPriceElement.firstChild.textContent = money.format(product.price) + " ";
   // Harga untuk operasi matematika harus dari API, bukan teks Rp yang diformat.
   apiPriceElement.dataset.price = String(product.price);
+  // variants.quantity merepresentasikan stok TOTAL (bukan per varian).
+  const totalStock = Number(product.variants?.quantity);
+  if (!Number.isInteger(totalStock) || totalStock < 0) {
+    showError("Stok produk dari API tidak valid.");
+    return;
+  }
+  apiPriceElement.dataset.stock = String(totalStock);
 
   // Varian diisi dari data API. Jangan hardcode pilihan Product 2.
   apiVariantInput.innerHTML = '<option value="">Pilih varian</option>';
@@ -109,6 +119,8 @@ function renderProduct(product) {
   apiVariantInput.disabled = false;
   apiSubmitButton.disabled = false;
   apiCheckoutBar.hidden = true;
+  $("#selectionFeedback").textContent = "";
+  $("#unitList").replaceChildren();
   $("#product-intro").textContent = product.description;
   $("#product-description").textContent = product.description;
   $("#product-variants").textContent = product.variants.colorOrSize.join(" · ");
@@ -123,7 +135,7 @@ function renderProduct(product) {
   // maxQuantity = product.variants.quantity;
   // updateQuantity(1);
   // addToBag.disabled = maxQuantity < 1;
-  $("#stock-summary").textContent = "· Harga dari API";
+  $("#stock-summary").textContent = "· Stok total: " + totalStock + " (API)";
   renderGallery(product);
   status.textContent = "";
   status.classList.remove("is-error");

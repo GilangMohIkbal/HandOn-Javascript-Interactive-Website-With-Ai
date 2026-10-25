@@ -14,7 +14,7 @@
     <script src="script.js" defer></script>
     <script src="product-interaction.js" defer></script>
   </head>
-  <body class="day15-product">
+  <body class="day15-product day16-product">
     <div class="announcement">Pengiriman gratis untuk pesanan di atas £80 <span aria-hidden="true">✳</span></div>
     <header class="site-header">
       <a class="wordmark" href="#top" aria-label="Escentric Molecules, beranda">ESCENTRIC<br /><span>MOLECULES</span></a>
@@ -42,7 +42,7 @@
         <div class="product-info" id="detail">
           <p class="eyebrow">Product collection <span>·</span> Product detail</p>
           <h1 id="product-title">Memuat produk…</h1>
-          <p class="product-price" id="productPrice" data-price="">— <span id="stock-summary">Memuat stok</span></p>
+          <p class="product-price" id="productPrice" data-price="" data-stock="" data-stock-source="api">— <span id="stock-summary">Memuat stok</span></p>
           <p class="intro" id="product-intro">Informasi produk sedang diambil dari katalog.</p>
 
           <div class="accords" id="accords" aria-label="Variasi produk"></div>
@@ -74,7 +74,8 @@
             </div>
             <button id="updateSelectionButton" type="submit" class="day15-update-button" disabled>Update pilihan <span aria-hidden="true">↗</span></button>
           </form>
-          <p class="shipping-note"><span aria-hidden="true">✳</span> Harga dan varian produk diambil langsung dari API.</p>
+          <p class="day16-feedback" id="selectionFeedback" role="status" aria-live="polite"></p>
+        <p class="shipping-note"><span aria-hidden="true">✳</span> Harga dan varian produk diambil langsung dari API.</p>
 
           <button class="wishlist-button" id="wishlist-button" type="button" aria-pressed="false">
             <span class="wishlist-icon" aria-hidden="true">♡</span>
@@ -106,6 +107,7 @@
         <div class="checkout-description">
           <span class="checkout-eyebrow">Pilihan kamu</span>
           <p id="selectionSummary" aria-live="polite"></p>
+          <ul id="unitList" class="day16-unit-list" aria-label="Daftar unit pesanan"></ul>
         </div>
         <div class="checkout-total"><span>Subtotal</span><strong id="subtotalText" aria-live="polite"></strong></div>
         <button id="checkoutButton" class="checkout-action" type="button">Lanjutkan pembayaran <span aria-hidden="true">↗</span></button>
