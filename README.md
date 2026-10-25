@@ -1,8 +1,8 @@
-# Bootcamp Day 15 — JavaScript Fundamentals & Interactive Product Website
+# Bootcamp Product App — Day 15 & Day 16
 
 **Project:** Product Detail + Product API (kelanjutan project mentor)
 **Peserta:** Gilang Moh. Ikbal
-**Materi:** JavaScript Fundamentals — Day 15, dengan latihan bonus backend.
+**Materi:** Day 15 JavaScript Fundamentals + Day 16 JavaScript Control Flow.
 
 ## Gambaran singkat
 
@@ -12,6 +12,16 @@ Project ini meneruskan codebase pembelajaran mentor: dua halaman detail produk d
 - **Product 2** — `project-AI/index.html?id=2`: harga, varian, deskripsi, dan foto dari Express API.
 - **Admin Vite** — `project-AI/frontend/`: membuat, mengedit, dan menghapus produk lewat API.
 - **Bonus Day 15** — perbaikan perhitungan stok produk dan galeri maksimal tiga foto. Ini tambahan, bukan syarat utama Practical Guidance.
+
+## Fitur Day 16 — Control Flow
+
+- `switch` menentukan varian: Product 1 memakai data stok latihan S=5, M=3, L=0. Product 2 hanya memakai varian dan stok total yang diterima dari API.
+- `if/else if/else` menghentikan subtotal bila quantity, harga, atau stok tidak valid.
+- `for` (default) dan `while` (dengan `?loop=while`) menghasilkan daftar per unit pesanan; hanya satu loop aktif per submit.
+- Output/error lama dibersihkan saat pilihan berubah; fitur Day 15 dan galeri foto tetap dipertahankan.
+- Detail ketentuan dan testing: [Day 16 Control Flow](docs/DAY16_CONTROL_FLOW.md) dan [Testing Day 16](docs/TESTING_DAY16.md).
+
+Latihan kode PPT (`if/else`, diskon, kopi gratis, dan promo mingguan) tersedia di [exercises/day16](exercises/day16/README.md). Latihan ini terpisah dari implementasi situs.
 
 ## Stack
 
@@ -37,6 +47,8 @@ HTML, CSS, JavaScript vanilla, Vite (admin), Node.js, Express, PostgreSQL 16, Do
 │   └── assets/
 └── docs/
     ├── TESTING_DAY15.md
+    ├── TESTING_DAY16.md
+    ├── DAY16_CONTROL_FLOW.md
     └── SUBMISSION_WORKFLOW.md
 ```
 
@@ -60,7 +72,6 @@ npm run dev
 Jika sudah pernah menyiapkan dan mengisi database, **jangan jalankan seed ulang**. Migration yang sudah diterapkan akan dilewati. Untuk stok lama, gunakan `node scripts/audit-stock.js` sebelum migration `004` ketika pindah dari database versi lama.
 
 Endpoint:
-
 - `http://localhost:3000/health`
 - `http://localhost:3000/api/products/2`
 - `http://localhost:3000/api-docs`
@@ -93,6 +104,8 @@ npm test
 npm run build
 ```
 
+Lihat [catatan pengujian Day 15](docs/TESTING_DAY15.md) untuk checklist manual utama dan bonus.
+
 ## Aturan implementasi
 
 - Product 1 menggunakan data HTML; Product 2 **wajib** mengambil data asli dari API.
@@ -110,9 +123,10 @@ AI digunakan untuk diskusi materi, review dan debugging, membantu penulisan impl
 
 Project ini dilanjutkan dari materi mentor di [Dibimbing-Web-Bootcamp-Mentor / NEW_2026](https://github.com/daffabadrant9390/Dibimbing-Web-Bootcamp-Mentor/tree/master/NEW_2026); backend yang tersedia dalam materi juga merujuk repository `Fannan-Fauzan-Fardhurohman/api-product`. Atribusi dicantumkan untuk membedakan baseline pembelajaran dengan pekerjaan lanjutan.
 
-## Submission dan kelanjutan Day 16
+## Submission Day 15 dan Day 16
 
 - Versi Day 15 ditandai **tag `day-15-submission`** setelah semua tes lulus.
-- Day 16 melanjutkan repository yang sama di branch pengembangan, lalu mendapat tag `day-16-submission`.
+- Day 16 melanjutkan repository yang sama di branch `feature/day-16`; setelah diuji, merge ke `main` dan buat tag `day-16-submission`.
+- Lihat [panduan Git dan pengumpulan](docs/SUBMISSION_WORKFLOW.md).
 
 > Jangan commit `.env`, password asli, `node_modules`, backup database, atau hasil build. File `.env.example` hanya berisi nilai contoh.
