@@ -1,0 +1,43 @@
+# Local secrets: never commit real environment variables
+.env
+.env.*
+!.env.example
+!.env.*.example
+
+# Node.js dependencies and outputs
+node_modules/
+dist/
+build/
+coverage/
+.nyc_output/
+.vite/
+
+# Database backups, exports and local runtime files
+*.dump
+*.backup
+*.bak
+*.sqlite
+*.sqlite3
+*.db
+postgres-data/
+docker-data/
+
+# Logs and temporary output
+*.log
+logs/
+npm-debug.log*
+yarn-error.log*
+.cache/
+.tmp/
+tmp/
+temp/
+
+# OS and editor-specific files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Ignore any existing internal repository only via the copy script.

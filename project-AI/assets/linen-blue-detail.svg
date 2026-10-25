@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1080" viewBox="0 0 900 1080" role="img" aria-label="Ilustrasi kemeja linen biru"><defs>
+  <linearGradient id="background" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#eeece7"/><stop offset="1" stop-color="#d9d9d1"/></linearGradient>
+  <linearGradient id="cloth" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#7695a6"/><stop offset=".48" stop-color="#587f96"/><stop offset="1" stop-color="#3e697f"/></linearGradient>
+  <linearGradient id="clothDark" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#527a91"/><stop offset="1" stop-color="#385f75"/></linearGradient>
+  <linearGradient id="fold" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#aec5cc"/><stop offset="1" stop-color="#547b90"/></linearGradient>
+  <filter id="shadow" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="26"/></filter>
+  <pattern id="linen" width="13" height="13" patternUnits="userSpaceOnUse"><path d="M0 4h13 M4 0v13" stroke="#d5e0e3" stroke-width=".7" opacity=".15"/></pattern>
+</defs><rect width="900" height="1080" fill="url(#background)"/><path d="M75 155 Q400 15 840 140" stroke="#fff" stroke-width="2" opacity=".18" fill="none"/><rect width="900" height="1080" fill="#d1d6d4"/>
+<g transform="translate(-160 -150) scale(1.35)">
+<rect x="150" y="110" width="730" height="980" fill="url(#cloth)" stroke="#375f75" stroke-width="3"/>
+<rect x="150" y="110" width="730" height="980" fill="url(#linen)"/>
+<path d="M323 210 500 373 676 210 736 320 500 532 263 320Z" fill="#91b1bd" stroke="#375c71" stroke-width="7"/>
+<path d="M500 405 V1080" stroke="#d0dce0" stroke-width="7" opacity=".68"/><path d="M515 405 V1080" stroke="#335e78" stroke-width="3" opacity=".7"/>
+<path d="M263 320 355 419 M736 320 647 419" stroke="#41687e" stroke-width="6" opacity=".8"/>
+<g fill="#ebdfcc" stroke="#c7bca8" stroke-width="2"><circle cx="500" cy="581" r="9"/><circle cx="500" cy="714" r="9"/><circle cx="500" cy="847" r="9"/></g>
+<path d="M590 628 H803 V839 H590 Z" fill="none" stroke="#335c71" stroke-width="5"/><path d="M597 645 H796" fill="none" stroke="#cedbe0" opacity=".4" stroke-width="4"/>
+</g>
+</svg>

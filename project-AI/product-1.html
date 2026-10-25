@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#f4f1eb" />
+  <meta name="description" content="Halaman latihan Day 15: Kemeja Linen Biru, pemilihan varian, jumlah, dan subtotal." />
+  <title>Kemeja Linen Biru | Studio Basics</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <!-- Menggunakan styles.css asli mentor, tanpa mengubahnya. -->
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="product-day15.css" />
+</head>
+<body class="day15-product">
+  <div class="announcement">STUDIO BASICS <span aria-hidden="true">✳</span> Everyday essentials, thoughtfully made</div>
+  <header class="site-header">
+    <a href="product-1.html" class="wordmark" aria-label="Studio Basics, beranda">STUDIO<br /><span>BASICS</span></a>
+    <nav class="primary-nav" aria-label="Navigasi utama">
+      <a href="#detail">Koleksi</a>
+      <a href="#cerita">Detail produk</a>
+      <a href="index.html?id=2">Produk dari API ↗</a>
+    </nav>
+    <a class="bag-button" href="#productForm" aria-label="Menuju pilihan produk">Pilih produk <span aria-hidden="true">↗</span></a>
+  </header>
+
+  <main id="top">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <a href="product-1.html">Beranda</a><span>/</span><span>Koleksi Linen</span><span>/</span><span>Kemeja Linen Biru</span>
+    </nav>
+
+    <section class="product-layout" aria-labelledby="product-title">
+      <!-- Galeri ilustrasi demo lokal. Ganti assets/*.svg dengan foto asli produk bila tersedia. -->
+      <div class="gallery demo-gallery" aria-label="Galeri Kemeja Linen Biru">
+        <input class="demo-gallery-input" type="radio" name="productPhoto" id="photoFront" checked />
+        <input class="demo-gallery-input" type="radio" name="productPhoto" id="photoBack" />
+        <input class="demo-gallery-input" type="radio" name="productPhoto" id="photoDetail" />
+        <div class="demo-gallery-inner">
+          <div class="thumbnail-list" aria-label="Pilih gambar produk">
+            <label class="thumbnail" for="photoFront" title="Tampak depan"><img src="assets/linen-blue-front.svg" alt="Ilustrasi tampak depan kemeja" /></label>
+            <label class="thumbnail" for="photoBack" title="Tampak belakang"><img src="assets/linen-blue-back.svg" alt="Ilustrasi tampak belakang kemeja" /></label>
+            <label class="thumbnail" for="photoDetail" title="Detail kain dan kancing"><img src="assets/linen-blue-detail.svg" alt="Ilustrasi detail kemeja" /></label>
+          </div>
+          <div class="hero-image-wrap demo-hero">
+            <img class="demo-slide slide-front" src="assets/linen-blue-front.svg" alt="Kemeja linen biru tampak depan" />
+            <img class="demo-slide slide-back" src="assets/linen-blue-back.svg" alt="Kemeja linen biru tampak belakang" />
+            <img class="demo-slide slide-detail" src="assets/linen-blue-detail.svg" alt="Detail kerah, kain dan kancing" />
+            <span class="demo-visual-label">Day 15 · Product study</span>
+          </div>
+        </div>
+        <p class="visual-caption">Foto contoh digambarkan sebagai ilustrasi demo; bukan foto produk asli.</p>
+      </div>
+
+      <div class="product-info" id="detail">
+        <p class="eyebrow">Everyday collection <span>·</span> Linen essentials</p>
+        <h1 id="product-title">Kemeja<br />Linen Biru</h1>
+        <p class="product-price" id="productPrice" data-price="150000">Rp150.000 <span>· Harga per item</span></p>
+        <p class="intro">Kemeja linen biru dengan potongan santai. Ringan dan mudah dipadukan untuk tampilan sehari-hari.</p>
+        <div class="accords" aria-label="Informasi produk"><span>Linen</span><span>Unisex</span><span>S · M · L</span></div>
+
+        <!-- Seluruh ID disiapkan agar dapat dipakai dalam product-interaction.js pada tahap Day 15. -->
+        <form id="productForm" class="day15-form">
+          <div class="form-fields">
+            <div class="form-field">
+              <label for="variant">Pilih ukuran</label>
+              <select id="variant" name="variant" required>
+                <option value="">Pilih ukuran</option>
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label for="quantity">Jumlah</label>
+              <input id="quantity" name="quantity" type="number" min="1" step="1" value="1" required />
+            </div>
+          </div>
+          <button type="submit" class="day15-update-button">Update pilihan <span aria-hidden="true">↗</span></button>
+        </form>
+
+        <p class="shipping-note"><span aria-hidden="true">✳</span> Pilih ukuran dan jumlah, lalu klik Update Pilihan untuk melihat subtotal.</p>
+        <div class="product-details" id="cerita">
+          <details open><summary>Deskripsi <span aria-hidden="true">+</span></summary><p>Kemeja linen warna biru, ukuran S/M/L, harga Rp150.000. Data produk ini ditulis langsung dalam HTML sebagai latihan hardcode Day 15, tanpa request API.</p></details>
+          <details><summary>Info pembelajaran <span aria-hidden="true">+</span></summary><p>Langkah berikutnya: gunakan Number() untuk mengubah harga dan quantity ke number, hitung subtotal, lalu tampilkan pada checkout bar tanpa reload.</p></details>
+        </div>
+        <p class="learning-note">Halaman demo untuk pembelajaran, tidak melakukan pembayaran nyata.</p>
+      </div>
+    </section>
+
+    <!-- Footer checkout siap dikontrol product-interaction.js pada tahap berikutnya. -->
+    <aside id="checkoutBar" class="checkout-bar" aria-label="Ringkasan pilihan" hidden>
+      <div class="checkout-description">
+        <span class="checkout-eyebrow">Pilihan kamu</span>
+        <p id="selectionSummary" aria-live="polite"></p>
+      </div>
+      <div class="checkout-total"><span>Subtotal</span><strong id="subtotalText" aria-live="polite"></strong></div>
+      <button id="checkoutButton" class="checkout-action" type="button">Lanjutkan pembayaran <span aria-hidden="true">↗</span></button>
+    </aside>
+  </main>
+
+  <footer class="site-footer"><span>Studio Basics</span><span>Linen / Essentials</span><span>Product study · Day 15</span></footer>
+  <!-- Satu file interaksi dipakai di Product 1 (hardcode) dan Product 2 (API). -->
+  <script src="product-interaction.js" defer></script>
+</body>
+</html>
